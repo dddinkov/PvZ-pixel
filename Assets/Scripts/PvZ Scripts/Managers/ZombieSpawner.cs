@@ -33,6 +33,8 @@ public class ZombieSpawner : MonoBehaviour
     {
         time += Time.deltaTime;
 
+        UpdateRewardPosition();
+
         if (TryDropReward())
         {
             EndWaves();
@@ -130,6 +132,6 @@ public class ZombieSpawner : MonoBehaviour
 
     private bool IsLastWave()
     {
-        return i == waves.Length - 1;
+        return i == waves.Length;
     }
 }

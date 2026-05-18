@@ -6,17 +6,6 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     public float hp = 10.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void TakeHealth(float damage)
     {
@@ -74,5 +63,10 @@ public class HealthSystem : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public float GetHealth()
+    {
+        return hp;
     }
 }
