@@ -44,7 +44,7 @@ public class DeckCard : MonoBehaviour
             return;
         }
         vec = vec.normalized;
-        currentTransform.position = currentTransform.transform.position + vec * movingSpeed * Time.deltaTime;
+        currentTransform.position = Vector2.MoveTowards(currentTransform.position, destination.position, movingSpeed * Time.deltaTime);
     }
 
     public void JoinSlots()

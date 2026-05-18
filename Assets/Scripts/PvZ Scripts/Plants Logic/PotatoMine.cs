@@ -5,13 +5,13 @@ using UnityEngine;
 public class PotatoMine : MonoBehaviour
 {
     [SerializeField]
-    float damage;
+    private float damage;
     [SerializeField]
-    float cooldown;
+    private float cooldown;
     [SerializeField]
-    float distance;
-    Animator animator;
-    Collider2D trigger;
+    private float distance;
+    private Animator animator;
+    private Collider2D trigger;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +38,11 @@ public class PotatoMine : MonoBehaviour
         if(collision.gameObject.tag == "Zombie" && animator.GetBool("awake"))
         {
             Explode();
+            trigger.enabled = false;
         }
     }
 
-    void Explode()
+    private void Explode()
     {
         RaycastHit2D[] rHits = Physics2D.RaycastAll(gameObject.transform.position, Vector2.right, distance);
         RaycastHit2D[] lHits = Physics2D.RaycastAll(gameObject.transform.position, Vector2.left, distance);
@@ -50,11 +51,9 @@ public class PotatoMine : MonoBehaviour
 
         DamageZombies(rHits);
         DamageZombies(lHits);
-
-        trigger.enabled = false;
     }
 
-    void DamageZombies(RaycastHit2D[] hits)
+    private void DamageZombies(RaycastHit2D[] hits)
     {
         foreach (RaycastHit2D hit in hits)
         {
