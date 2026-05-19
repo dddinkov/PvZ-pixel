@@ -2,7 +2,8 @@
 
 A fan-made 2D tower defence game inspired by Plants vs. Zombies, built in Unity as a personal learning project.
 
-![Gameplay Screenshot](./description-resources/demo.png)
+![Gameplay Screenshot](./description-resources/gameplay.png)
+![Card Selection Screenshot](./description-resources/card-deck.png)
 
 ## Features
 
