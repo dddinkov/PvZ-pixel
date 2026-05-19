@@ -57,6 +57,9 @@ TagManager:
   - name: Zombies
     uniqueID: 3076608889
     locked: 0
+  - name: Zombie Armor
+    uniqueID: 1909458575
+    locked: 0
   - name: Drops
     uniqueID: 2388319997
     locked: 0
