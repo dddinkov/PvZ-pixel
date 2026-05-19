@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 9d3fa0c70f017674f954752f1022b096
+guid: 0d1cfcdfb78eec34487bb756e8f05842
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -5122516820042412251
-    second: basic-zombie-eat_0
-  - first:
-      213: -7399818228293926765
-    second: basic-zombie-eat_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -71,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -116,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basic-zombie-eat_0
+      name: cone_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f8869a71a29e8b0800000000000000
-      internalID: -5122516820042412251
+      spriteID: ad800cf6c70327745ab998e1ae7a5ebb
+      internalID: 254819837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basic-zombie-eat_1
+      name: cone_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 390841cf6809e4990800000000000000
-      internalID: -7399818228293926765
+      spriteID: b26c7cbbcd8eaad40b663857e1bf4100
+      internalID: -1221519067
       vertices: []
       indices: 
       edges: []
@@ -168,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basic-zombie-eat_0: -5122516820042412251
-      basic-zombie-eat_1: -7399818228293926765
+      cone_0: 254819837
+      cone_1: -1221519067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

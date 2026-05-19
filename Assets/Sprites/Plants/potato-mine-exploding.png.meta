@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 9d3fa0c70f017674f954752f1022b096
+guid: fe37b788924fc4e46a72d3cd76164d18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5122516820042412251
-    second: basic-zombie-eat_0
+      213: -1008907660781164633
+    second: potato-mine-exploding_0
   - first:
-      213: -7399818228293926765
-    second: basic-zombie-eat_1
+      213: -8773391423039533248
+    second: potato-mine-exploding_1
+  - first:
+      213: 8192473733699302006
+    second: potato-mine-exploding_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basic-zombie-eat_0
+      name: potato-mine-exploding_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f8869a71a29e8b0800000000000000
-      internalID: -5122516820042412251
+      spriteID: 7a7e7f3f3d3aff1f0800000000000000
+      internalID: -1008907660781164633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basic-zombie-eat_1
+      name: potato-mine-exploding_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +154,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 390841cf6809e4990800000000000000
-      internalID: -7399818228293926765
+      spriteID: 04f0542fbf6ae3680800000000000000
+      internalID: -8773391423039533248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potato-mine-exploding_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6727dd8847381b170800000000000000
+      internalID: 8192473733699302006
       vertices: []
       indices: 
       edges: []
@@ -168,8 +192,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basic-zombie-eat_0: -5122516820042412251
-      basic-zombie-eat_1: -7399818228293926765
+      potato-mine-exploding_0: -1008907660781164633
+      potato-mine-exploding_1: -8773391423039533248
+      potato-mine-exploding_2: 8192473733699302006
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

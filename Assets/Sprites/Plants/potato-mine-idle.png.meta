@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 9d3fa0c70f017674f954752f1022b096
+guid: f3be24d15070c6549bb2515f2cf37557
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5122516820042412251
-    second: basic-zombie-eat_0
+      213: -4380897147630497747
+    second: potato-mine-idle_0
   - first:
-      213: -7399818228293926765
-    second: basic-zombie-eat_1
+      213: -7351605319266831228
+    second: potato-mine-idle_1
+  - first:
+      213: 6651361972014875681
+    second: potato-mine-idle_2
+  - first:
+      213: 7240493399728048760
+    second: potato-mine-idle_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basic-zombie-eat_0
+      name: potato-mine-idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f8869a71a29e8b0800000000000000
-      internalID: -5122516820042412251
+      spriteID: d2056f5514de333c0800000000000000
+      internalID: -4380897147630497747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basic-zombie-eat_1
+      name: potato-mine-idle_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +157,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 390841cf6809e4990800000000000000
-      internalID: -7399818228293926765
+      spriteID: 4847a30a9e9d9f990800000000000000
+      internalID: -7351605319266831228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potato-mine-idle_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1240d7e19726e4c50800000000000000
+      internalID: 6651361972014875681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potato-mine-idle_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ac951a2666b7460800000000000000
+      internalID: 7240493399728048760
       vertices: []
       indices: 
       edges: []
@@ -168,8 +216,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basic-zombie-eat_0: -5122516820042412251
-      basic-zombie-eat_1: -7399818228293926765
+      potato-mine-idle_0: -4380897147630497747
+      potato-mine-idle_1: -7351605319266831228
+      potato-mine-idle_2: 6651361972014875681
+      potato-mine-idle_3: 7240493399728048760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
