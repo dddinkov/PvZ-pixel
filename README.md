@@ -1,6 +1,7 @@
 # Plants vs. Zombies Clone in pixelart style (Unity, C#)
 
 A fan-made 2D tower defence game inspired by Plants vs. Zombies, built in Unity as a personal learning project.
+Demo: https://dddinkov.itch.io/td-demo?secret=1U5PPubnxz430MBD7TOiy3Itekc
 
 ![Gameplay Screenshot](./description-resources/gameplay.png)
 ![Card Selection Screenshot](./description-resources/card-deck.png)
