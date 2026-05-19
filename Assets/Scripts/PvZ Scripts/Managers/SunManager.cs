@@ -25,6 +25,11 @@ public class SunManager : MonoBehaviour
     void Update()
     {
         time = time + Time.deltaTime;
+        SpawnSunPrefab();
+    }
+
+    private void SpawnSunPrefab()
+    {
         if(time >= 5.0f)
         {
             float r1, r2;

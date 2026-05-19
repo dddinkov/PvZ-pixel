@@ -15,9 +15,25 @@ public class LevelManager : MonoBehaviour
     private string[] textStrings;
     [SerializeField]
     private float interval;
+    private Player player;
+    [SerializeField] 
+    private LevelSettings[] levels;
+    private int levelIndex;
+    [SerializeField]
+    private ZombieSpawner zombieSpawner;
+
+    void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<Player>();
+        levelIndex = player.GetLevel() - 1;
+    }
 
     public void StartLevel()
-    { 
+    {
+        LevelSettings selectedLevel = levels[levelIndex];
+        zombieSpawner.SetLevel(selectedLevel);
+        zombieSpawner.InstantiateReward();
+        
         ShowText();
         foreach(GameObject gameObject in objectsToDeactivateAfterCardSelection)
         {

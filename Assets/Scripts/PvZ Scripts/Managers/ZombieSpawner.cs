@@ -1,137 +1,147 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField]
-    GameObject[] zombies;
-    [SerializeField]
-    Transform[] spawnPoints;
-    [SerializeField]
-    int[] waves;
-    int i;
-    float time = 0.0f;
-    [SerializeField]
-    float spawnRate = 7.0f;
-    [SerializeField]
-    List<GameObject> aliveZombies;
-    [SerializeField]
-    private GameObject reward;
-    [SerializeField]
-    private GameObject mainCanvas;
-    private Vector3 rewardPosition;
-    void Start()
-    {
-        i = 0;
-        aliveZombies = new List<GameObject>();
-    }
+    private LevelSettings levelSettings;
 
-    // Update is called once per frame
+    [SerializeField]
+    private Transform[] spawnPoints;
+
+    private int currentWave;
+    private float time;
+
+    private List<GameObject> aliveZombies = new();
+
+    private GameObject rewardInstance;
+    private Vector3 rewardPosition;
+    private int[] waves;
+    [SerializeField]
+    private int intervalAfterWaveBurst;
+
     void Update()
     {
-        time += Time.deltaTime;
-
-        UpdateRewardPosition();
-
-        if (TryDropReward())
+        if(levelSettings != null)
         {
-            EndWaves();
-        }
+            time += Time.deltaTime;
 
-        if (i < waves.Length)
-        {
             UpdateRewardPosition();
-            HandleWaves();
-        }
-        else
-        {
-            // Waves ended, now what ?
+
+            if (TryDropReward())
+            {
+                EndWaves();
+            }
+
+            if (currentWave < waves.Length)
+            {
+                HandleWaves();
+            }
         }
     }
 
     void HandleWaves()
     {
-        if (time > spawnRate && waves[i] > 0)
+        if (time > levelSettings.spawnRate &&
+            waves[currentWave] > 0)
         {
             aliveZombies.Add(InstantiateRandomZombie());
 
             time = 0;
-            waves[i]--;
+
+            waves[currentWave]--;
         }
-        else if (waves[i] <= 0)
+        else if (waves[currentWave] <= 0)
         {
             if (!HasAliveZombies())
             {
-                int k = aliveZombies.Count;
-                aliveZombies.Clear();
-                aliveZombies = new List<GameObject>();
+                int k = levelSettings.waves[currentWave];
                 for (int j = 0; j < k; ++j)
                 {
                     aliveZombies.Add(InstantiateRandomZombie());
                 }
-                spawnRate /= 2;
-                i++;
-                //Debug.Log("wave index=" + i);
+                currentWave++;
+                time -= intervalAfterWaveBurst;
             }
         }
     }
 
+    private GameObject InstantiateRandomZombie()
+    {
+        int zombieIndex =
+            Random.Range(0, levelSettings.zombiePrefabs.Length);
+
+        int spawnIndex =
+            Random.Range(0, spawnPoints.Length);
+
+        return Instantiate(
+            levelSettings.zombiePrefabs[zombieIndex],
+            spawnPoints[spawnIndex].position,
+            Quaternion.identity
+        );
+    }
+
     private bool TryDropReward()
     {
-        if (i == waves.Length && !HasAliveZombies())
+        if (currentWave >= waves.Length &&
+            !HasAliveZombies())
         {
-            //Debug.Log("Dropping reward");
-            reward.transform.position = rewardPosition;
-            reward.SetActive(true);
+            if (rewardInstance != null)
+            {
+                rewardInstance.transform.position = rewardPosition;
+                rewardInstance.SetActive(true);
+            }
+
             return true;
         }
+
         return false;
     }
 
-    private GameObject InstantiateRandomZombie()
-    {
-        int zombie = Random.Range(0, zombies.Length);
-        int spawnPoint = Random.Range(0, spawnPoints.Length);
-
-        return Instantiate(zombies[zombie], spawnPoints[spawnPoint]);
-    }
-
-    private void EndWaves()
-    {
-        i = waves.Length + 1;
-    }
-
     private bool HasAliveZombies()
+    {
+        aliveZombies.RemoveAll(z => z == null);
+
+        return aliveZombies.Count > 0;
+    }
+
+    private void UpdateRewardPosition()
     {
         foreach (GameObject zombie in aliveZombies)
         {
             if (zombie != null)
             {
-                return true;
+                rewardPosition = zombie.transform.position;
+                return;
             }
         }
-        return false;
     }
 
-    private void UpdateRewardPosition()
+    private void EndWaves()
     {
-        if(IsLastWave())
+        currentWave = waves.Length + 1;
+    }
+
+    public void SetLevel(LevelSettings levelSettings)
+    {
+        this.levelSettings = levelSettings;
+        
+        currentWave = 0;
+        time = 0f;
+
+        aliveZombies.Clear();
+
+        waves = (int[])levelSettings.waves.Clone();
+    }
+
+    public void InstantiateReward()
+    {
+        if (levelSettings != null && levelSettings.rewardPrefab != null)
         {
-            foreach (GameObject zombie in aliveZombies)
-            {
-                if (zombie != null)
-                {
-                    rewardPosition = zombie.transform.position;
-                    return;
-                }
-            }
-        }
-    }
+            GameObject mainCanvas = GameObject.Find("Main Canvas");
+            rewardInstance = Instantiate(levelSettings.rewardPrefab);
 
-    private bool IsLastWave()
-    {
-        return i == waves.Length;
+            rewardInstance.transform.SetParent(mainCanvas.transform, false);
+            rewardInstance.SetActive(false);
+        }
     }
 }
