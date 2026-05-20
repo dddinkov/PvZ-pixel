@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
     public float hp = 10.0f;
+    [SerializeField]
+    private Animator animator;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void TakeHealth(float damage)
     {
@@ -17,6 +24,8 @@ public class HealthSystem : MonoBehaviour
 
         // If somebody is dying
         HandleDying();
+
+        UpdateAnimatorIfExists();
     }
     
     // Handles dying logic
@@ -68,5 +77,13 @@ public class HealthSystem : MonoBehaviour
     public float GetHealth()
     {
         return hp;
+    }
+
+    private void UpdateAnimatorIfExists()
+    {
+        if (animator != null)
+        {
+            animator.SetFloat("Health", hp);
+        }
     }
 }
