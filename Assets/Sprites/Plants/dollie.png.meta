@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: f3be24d15070c6549bb2515f2cf37557
+guid: a08d95e6456603b4297f109d53d43196
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4380897147630497747
-    second: potato-mine-idle_0
-  - first:
-      213: -7351605319266831228
-    second: potato-mine-idle_1
-  - first:
-      213: 6651361972014875681
-    second: potato-mine-idle_2
-  - first:
-      213: 7240493399728048760
-    second: potato-mine-idle_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -77,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -122,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: potato-mine-idle_0
+      name: dollie_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2056f5514de333c0800000000000000
-      internalID: -4380897147630497747
+      spriteID: 5071de78a600abd4e8e8476676705aa0
+      internalID: -1381337654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: potato-mine-idle_1
+      name: dollie_1
       rect:
         serializedVersion: 2
         x: 32
@@ -157,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4847a30a9e9d9f990800000000000000
-      internalID: -7351605319266831228
+      spriteID: 2b60b0c294bbfdc4fab6bef24ddf80e8
+      internalID: -1584777348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: potato-mine-idle_2
+      name: dollie_2
       rect:
         serializedVersion: 2
         x: 64
@@ -178,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1240d7e19726e4c50800000000000000
-      internalID: 6651361972014875681
+      spriteID: 336345caae21f13449724d972f51a968
+      internalID: 1174854683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: potato-mine-idle_3
+      name: dollie_3
       rect:
         serializedVersion: 2
         x: 96
@@ -199,8 +187,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87ac951a2666b7460800000000000000
-      internalID: 7240493399728048760
+      spriteID: ad96ad9fc90faa849bfc3262719be6b8
+      internalID: -1737065260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dollie_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509316d9428f4d3459aad7873e77fef1
+      internalID: 1014101959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dollie_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaf8c89ebc6fd64cbc44935ce56ec29
+      internalID: -203920622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dollie_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247920d09024c34419eee58ec75daf61
+      internalID: -257037678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dollie_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a2ecd48ae958649854d6918413a680
+      internalID: -1618236584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dollie_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb346d5ae14175468646bde3d3f6cec
+      internalID: 1743504471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dollie_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c7d03d70d7bc8479d543ef85812fdc
+      internalID: 1053548495
       vertices: []
       indices: 
       edges: []
@@ -216,10 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      potato-mine-idle_0: -4380897147630497747
-      potato-mine-idle_1: -7351605319266831228
-      potato-mine-idle_2: 6651361972014875681
-      potato-mine-idle_3: 7240493399728048760
+      dollie_0: -1381337654
+      dollie_1: -1584777348
+      dollie_2: 1174854683
+      dollie_3: -1737065260
+      dollie_4: 1014101959
+      dollie_5: -203920622
+      dollie_6: -257037678
+      dollie_7: -1618236584
+      dollie_8: 1743504471
+      dollie_9: 1053548495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
