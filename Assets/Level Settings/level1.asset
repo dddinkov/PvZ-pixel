@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefabs:
   - {fileID: 231547337504897669, guid: 95e4247d2417c8e4ebcea6481784548c, type: 3}
-  waves: 03000000
+  - {fileID: 231547337504897669, guid: 3ce81417b65e76540ab51139bcfcdffc, type: 3}
+  waves: 030000000500000006000000070000000700000007000000
   spawnRate: 7
   rewardPrefab: {fileID: 270786795470695368, guid: 5fb40c6b1b527c84d8f0bb7152b49a91, type: 3}
