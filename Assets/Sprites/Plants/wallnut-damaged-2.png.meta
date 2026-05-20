@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 739f35ab41da0b148a2b189a77407225
+guid: c6b3d23021c54844a944d9546dee982d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wallnut-healthy_0
+      name: wallnut-damaged-2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 004c192548e05e3449f576eeb36b51ba
-      internalID: 1724704923
+      spriteID: 9304f3186e08e594bbc732db338a3ad9
+      internalID: 1307397343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallnut-healthy_1
+      name: wallnut-damaged-2_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad306a24263bfe644b962dad83fdb991
-      internalID: -836138228
+      spriteID: 0ec318b49fe603646a68a34de249a755
+      internalID: 1597890601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallnut-healthy_2
+      name: wallnut-damaged-2_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ae5367f8b0db6a42b644ee5aa62144c
-      internalID: -2010113936
+      spriteID: ffeafcdf14ac37d4c9d61240dc335f39
+      internalID: 1475366099
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wallnut-healthy_0: 1724704923
-      wallnut-healthy_1: -836138228
-      wallnut-healthy_2: -2010113936
+      wallnut-damaged-2_0: 1307397343
+      wallnut-damaged-2_1: 1597890601
+      wallnut-damaged-2_2: 1475366099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
