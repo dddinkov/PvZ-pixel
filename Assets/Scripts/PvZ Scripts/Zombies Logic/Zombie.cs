@@ -14,7 +14,6 @@ public class Zombie : MonoBehaviour
     private float time = 0.0f;
     private bool isMoving;
     private Animator anim;
-
     // Start is called before the first frame update
     void Start()
     {
