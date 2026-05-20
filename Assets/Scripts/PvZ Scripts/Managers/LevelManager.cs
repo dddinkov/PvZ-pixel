@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
         zombieSpawner.SetLevel(selectedLevel);
         zombieSpawner.InstantiateReward();
         
-        ShowText();
+        StartCoroutine(ShowText());
         foreach(GameObject gameObject in objectsToDeactivateAfterCardSelection)
         {
             gameObject.SetActive(true);
@@ -45,14 +45,16 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    async void ShowText()
+    IEnumerator ShowText()
     {
         centralText.gameObject.SetActive(true);
-        foreach(string text in textStrings)
+
+        foreach (string text in textStrings)
         {
             centralText.text = text;
-            await System.Threading.Tasks.Task.Delay(System.TimeSpan.FromSeconds(interval));
+            yield return new WaitForSeconds(interval);
         }
+
         centralText.gameObject.SetActive(false);
     }
 }
