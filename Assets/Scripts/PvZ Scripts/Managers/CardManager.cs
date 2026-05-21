@@ -16,7 +16,6 @@ public class CardManager : MonoBehaviour
     [SerializeField]
     private Transform[] slotsTransforms;
     private GameObject[] slotsCards;
-    private int slotIndex = 0;
     void Start()
     {
         InitializeDeck();
@@ -39,19 +38,23 @@ public class CardManager : MonoBehaviour
     }
     public int GetSlotIndex()
     {
-        return slotIndex;
+        int i = -1;
+        for(i = 0; i < slotsCards.Length; ++i)
+        {
+            if (slotsCards[i] == null)
+            {
+                break;
+            }
+        }
+        return i;
     }
     private bool IsIndexValidSlotIndex(int index)
     {
-        if (0 > index || index > slotsTransforms.Length)
+        if (0 > index || index >= slotsTransforms.Length)
         {
             return false;
         }
         return true;
-    }
-    private bool IsSlotIndexValid()
-    {
-        return IsIndexValidSlotIndex(slotIndex);
     }
 
     public Transform AssignSlot(GameObject card, out int index)
@@ -62,9 +65,8 @@ public class CardManager : MonoBehaviour
             if (slotsCards[i] == null)
             {
                 index = i;
-                slotIndex = i;
-                slotsCards[slotIndex] = card;
-                return slotsTransforms[slotIndex++];
+                slotsCards[i] = card;
+                return slotsTransforms[i];
             }
         }
         return null;
@@ -78,8 +80,12 @@ public class CardManager : MonoBehaviour
     }
     public void SaveSlots()
     {
-        for(int i = 0; i < slotIndex; ++i)
+        for(int i = 0; i < slotsCards.Length; ++i)
         {
+            if(slotsCards[i] == null)
+            {
+                continue;
+            }
             GameObject card = Instantiate(slotsCards[i], slotsTransforms[i]);
             card.transform.SetParent(slotsGameObject.transform);
             card.transform.position = slotsTransforms[i].position;
