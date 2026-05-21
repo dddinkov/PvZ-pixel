@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 5.0f;
     public float damage = 1.0f;
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     private float timeToLive = 20.0f;
     // Start is called before the first frame update
     void Start()
@@ -29,11 +29,11 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.CompareTag("Zombie"))
+        if (trigger.gameObject.CompareTag("Zombie"))
         {
-            HealthSystem script = collision.gameObject.GetComponent<HealthSystem>();
+            HealthSystem script = trigger.gameObject.GetComponent<HealthSystem>();
             script.TakeDamage(damage);
             Destroy(gameObject);
         }
