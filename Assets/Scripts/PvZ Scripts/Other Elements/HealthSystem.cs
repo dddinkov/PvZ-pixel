@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEditor.Animations;
 using UnityEngine;
 
-public class HealthSystem : MonoBehaviour
+public class HealthSystem : MonoBehaviour, IDamageable
 {
     public float hp = 10.0f;
     [SerializeField]
@@ -14,7 +14,7 @@ public class HealthSystem : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void TakeHealth(float damage)
+    public void TakeDamage(float damage)
     {
 
         if (!TryToTakeHealthFromZombie(damage))
@@ -63,7 +63,7 @@ public class HealthSystem : MonoBehaviour
             HealthSystem armorHealthSystem = gameObject.GetComponentsInChildren<HealthSystem>().FirstOrDefault(h => h.gameObject != gameObject);
             if (armorHealthSystem != null)
             {
-                armorHealthSystem.TakeHealth(damage);
+                armorHealthSystem.TakeDamage(damage);
             }
             else // If there is no armor, we will take damage from the zombie itself
             {

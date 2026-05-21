@@ -61,7 +61,7 @@ public class PotatoMine : MonoBehaviour
             if (target.CompareTag("Zombie"))
             {
                 HealthSystem hs = target.GetComponent<HealthSystem>();
-                hs.TakeHealth(damage);
+                hs.TakeDamage(damage);
             }
         }
     }

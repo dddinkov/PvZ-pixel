@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Zombie"))
         {
             HealthSystem script = collision.gameObject.GetComponent<HealthSystem>();
-            script.TakeHealth(damage);
+            script.TakeDamage(damage);
             Destroy(gameObject);
         }
     }

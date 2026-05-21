@@ -51,7 +51,7 @@ public class PoisoningSystem : MonoBehaviour
         float time = 0f;
         while (time < duration)
         {
-            system.TakeHealth(dps);
+            system.TakeDamage(dps);
             yield return new WaitForSeconds(1f);
             time += 1f;
         }

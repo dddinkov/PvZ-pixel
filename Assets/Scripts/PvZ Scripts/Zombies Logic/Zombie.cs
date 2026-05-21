@@ -43,7 +43,7 @@ public class Zombie : MonoBehaviour
             isMoving = false;
             rb.velocity = Vector3.zero;
             HealthSystem script = coll.gameObject.GetComponent<HealthSystem>();
-            script.TakeHealth(damage);
+            script.TakeDamage(damage);
             time = 0.0f;
         }
     }
