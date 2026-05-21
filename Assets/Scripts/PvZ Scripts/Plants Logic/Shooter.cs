@@ -1,38 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public abstract class Shooter : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
 
-    private float time = 0.0f;
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    protected Animator animator;
 
-    // Update is called once per frame
+    private float time = 0.0f;
+    [SerializeField]
+    private float shootCooldown = 3.0f;
+
     void Update()
     {
         time = time + Time.deltaTime;
-        RaycastHit2D[] raycastHit = Physics2D.RaycastAll(firePoint.position, firePoint.TransformDirection(Vector2.right),1000.0f);
-        if(time >= 3.0f && raycastHit.Length > 0)
+        if(CanShoot() && time >= shootCooldown)
         {
-            foreach (RaycastHit2D hit in raycastHit)
-            {
-                if (hit.collider.gameObject.CompareTag("Zombie"))
-                {
-                    Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-                    time = 0.0f;
-                }
-            }
-        }
-        if(time >= 10000.0f)
-        {
-            time = 3.0f;
+            Shoot();
         }
     }
 
+    protected abstract bool CanShoot();
+
+    protected virtual void Shoot()
+    {
+        if(animator != null)
+        {
+            animator.SetTrigger("Shoot");
+        }
+        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        time = 0.0f;
+    }
 }
