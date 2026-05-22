@@ -17,6 +17,7 @@ public class SunManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        totalSun = 50.0f;
         sunAmountText = GameObject.Find("Sun Amount Text").GetComponent<TMP_Text>();
         sunAmountText.text = totalSun.ToString();
     }
