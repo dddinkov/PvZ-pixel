@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7276487149483477186}
   - component: {fileID: 6223862366199806560}
   - component: {fileID: 2188370160075812608}
+  - component: {fileID: -5249445506629048127}
   m_Layer: 0
   m_Name: Homing Thistle
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   animator: {fileID: 0}
+  hasAnimatorHealthParameter: 0
 --- !u!61 &6223862366199806560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,7 +155,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.005695302, y: -0.0046786666}
@@ -185,6 +187,21 @@ MonoBehaviour:
   firePoint: {fileID: 5629935854133511506}
   animator: {fileID: 3210772156942186221}
   shootCooldown: 3
+--- !u!114 &-5249445506629048127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178810032816628127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5678ea084ed76c84cb7977134e27d407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  animator: {fileID: 0}
+  hasAnimatorHealthParameter: 0
 --- !u!1 &7321597979752445428
 GameObject:
   m_ObjectHideFlags: 0

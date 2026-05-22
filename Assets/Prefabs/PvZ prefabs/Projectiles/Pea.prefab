@@ -388,6 +388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 200
   damage: 1
+  shootSound: {fileID: 8300000, guid: f8f32143f843a7a41b25b55040889a53, type: 3}
+  collisionSound: {fileID: 8300000, guid: f3b978be562e61e4984cf3b9b9fe4018, type: 3}
 --- !u!50 &4023563366321762911
 Rigidbody2D:
   serializedVersion: 4

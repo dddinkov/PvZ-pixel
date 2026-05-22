@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 40
+  animator: {fileID: 0}
+  hasAnimatorHealthParameter: 1
 --- !u!61 &8873352068562148226
 BoxCollider2D:
   m_ObjectHideFlags: 0
