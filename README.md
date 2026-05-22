@@ -29,6 +29,7 @@ Demo: https://dddinkov.itch.io/td-demo?secret=1U5PPubnxz430MBD7TOiy3Itekc
 
 - Drag-and-drop built from scratch using four Unity pointer interfaces — no third-party plugins
 - All pixel art assets created manually in [Pixilart](https://www.pixilart.com)
+- All sound effects from [Pixabay](https://pixabay.com)
 
 ## Project structure
 
