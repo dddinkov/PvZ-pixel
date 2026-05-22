@@ -18,6 +18,8 @@ public class Sun : MonoBehaviour, IPointerClickHandler
     private Transform destination;
     private Collider2D coll;
     public float collectSpeed = 200.0f;
+    [SerializeField]
+    private SoundManager ufoSoundManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Sun : MonoBehaviour, IPointerClickHandler
         fallDistance = fallOffset + Random.Range(0.0f, 1.0f) * maxFallDistance;
         destination = GameObject.Find("Sun Amount Text").GetComponent<Transform>();
         coll = GetComponent<Collider2D>();
+        ufoSoundManager = GameObject.Find("UfoSoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -81,6 +84,7 @@ public class Sun : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData data)
     {
         coll.enabled = false;
+        ufoSoundManager.PlaySound();
     }
 
 }
