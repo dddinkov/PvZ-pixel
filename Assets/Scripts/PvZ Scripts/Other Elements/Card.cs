@@ -16,6 +16,8 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
     private GameObject draggingObject;
     private Slider slider;
     private Image cardImage;
+    private SoundManager whooshSoundManager;
+    private SoundManager errorSoundManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,9 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
         draggingObject.transform.localScale = plantObject.transform.localScale;
         draggingObjectSpriteRenderer.color = Color.gray;
         draggingObjectSpriteRenderer.sortingLayerName = "Plant";
+
+        whooshSoundManager = GameObject.Find("WhooshSoundManager").GetComponent<SoundManager>();
+        errorSoundManager = GameObject.Find("ErrorSoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -51,24 +56,20 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
     }
     public void OnPointerClick(PointerEventData data)
     {
-        if (time < 8.0f)
+        if (time < cooldown || !SunManager.CanTakeSun(sunCost))
         {
             canDrag = false;
             BlinkRed();
             return;
         }
-        if(!SunManager.CanTakeSun(sunCost))
-        {
-            canDrag = false;
-            BlinkRed();
-            return;
-        }
+        whooshSoundManager.PlaySound();
+        startDragging = true;
         canDrag = true;
     }
 
     public void OnPointerDown(PointerEventData data)
     {
-        if(time < 8.0f && !canDrag)
+        if(time < cooldown && !canDrag)
         {
             startDragging = false;
             BlinkRed();
@@ -84,7 +85,6 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         draggingObject.transform.position = pos;
         draggingObject.SetActive(true);
-        startDragging = true;
         slider.value = 0.99f;
     }
 
@@ -111,7 +111,7 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
         RaycastHit2D[] raycastHits = Physics2D.RaycastAll(pos, Vector3.back);
         if(raycastHits.Length < 0)
         {
-            // make sound for incorrect placement ?
+            errorSoundManager.PlaySound();
             return;
         }
 
@@ -159,6 +159,7 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
     }
     public void BlinkRed()
     {
+        errorSoundManager.PlaySound();
         StartCoroutine(Blink(new Color(0.5f,0.1f,0.1f), 5, 1));
     }
 
