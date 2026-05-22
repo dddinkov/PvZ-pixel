@@ -23,7 +23,7 @@ Demo: https://dddinkov.itch.io/td-demo?secret=1U5PPubnxz430MBD7TOiy3Itekc
 | ![Wallnut](Assets/Sprites/Cards%20and%20slots/wallnut-card.png) | Blocks zombies, has damaged states |
 | ![Potato Mine](Assets/Sprites/Cards%20and%20slots/potato-mine-card.png) | Explodes on contact after arming |
 | ![Dollie](Assets/Sprites/Cards%20and%20slots/dollie-card.png) | Poisons zombies on collision |
-| ![Homing Thistle](Assets/Sprites/Cards%20and%20slots/homing-thistle-card.png) | Poisons zombies on collision |
+| ![Homing Thistle](Assets/Sprites/Cards%20and%20slots/homing-thistle-card.png) | Shoots thorns that follow the nearest zombie |
 
 ## Technical highlights
 
