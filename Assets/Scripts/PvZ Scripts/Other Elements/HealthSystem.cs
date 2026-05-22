@@ -9,6 +9,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public float hp = 10.0f;
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private bool hasAnimatorHealthParameter = false;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,7 +27,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         // If somebody is dying
         HandleDying();
 
-        UpdateAnimatorIfExists();
+        UpdateAnimatorHealthParameter();
     }
     
     // Handles dying logic
@@ -63,11 +65,13 @@ public class HealthSystem : MonoBehaviour, IDamageable
             HealthSystem armorHealthSystem = gameObject.GetComponentsInChildren<HealthSystem>().FirstOrDefault(h => h.gameObject != gameObject);
             if (armorHealthSystem != null)
             {
+                float damagedArmorHealth = armorHealthSystem.GetHealth() - damage;
                 armorHealthSystem.TakeDamage(damage);
-            }
-            else // If there is no armor, we will take damage from the zombie itself
-            {
-                hp -= damage;
+                if(damagedArmorHealth < 0)
+                {
+                    // If the armor is destroyed, we will take damage from the zombie itself
+                    hp += damagedArmorHealth; // damagedArmorHealth is negative, so we are actually subtracting the remaining damage from the zombie's health
+                }
             }
             return true;
         }
@@ -79,9 +83,9 @@ public class HealthSystem : MonoBehaviour, IDamageable
         return hp;
     }
 
-    private void UpdateAnimatorIfExists()
+    private void UpdateAnimatorHealthParameter()
     {
-        if (animator != null)
+        if (hasAnimatorHealthParameter)
         {
             animator.SetFloat("Health", hp);
         }
