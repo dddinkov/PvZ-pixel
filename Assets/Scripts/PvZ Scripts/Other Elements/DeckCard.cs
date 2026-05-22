@@ -23,11 +23,14 @@ public class DeckCard : MonoBehaviour
     private Button joinSlotButton;
     private Button leaveSlotButton;
     private int slotsIndex = -1;
+    [SerializeField]
+    private SoundManager whooshSoundManager;
     // Start is called before the first frame update
     void Start()
     {
         InitializeStartingPositions();
         InitializeSlotButtons();
+        whooshSoundManager = GameObject.Find("WhooshSoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -49,6 +52,7 @@ public class DeckCard : MonoBehaviour
 
     public void JoinSlots()
     {
+        whooshSoundManager.PlaySound();
         if(cardManager == null)
         {
             Debug.Log("Card Manager object is null in DeckCard script.");
@@ -61,6 +65,7 @@ public class DeckCard : MonoBehaviour
 
     public void ResetDestination()
     {
+        whooshSoundManager.PlaySound();
         cardManager.DisposeSlot(slotsIndex);
         slotsIndex = -1;
         joinSlotButton.gameObject.SetActive(true);
