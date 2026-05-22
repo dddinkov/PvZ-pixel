@@ -21,6 +21,8 @@ public class LevelManager : MonoBehaviour
     private int levelIndex;
     [SerializeField]
     private ZombieSpawner zombieSpawner;
+    [SerializeField]
+    private SoundManager cinematicBoomSoundManager;
 
     void Start()
     {
@@ -49,9 +51,14 @@ public class LevelManager : MonoBehaviour
     {
         centralText.gameObject.SetActive(true);
 
-        foreach (string text in textStrings)
+        for (int i = 0; i < textStrings.Length; i++)
         {
-            centralText.text = text;
+            if(cinematicBoomSoundManager != null)
+            {
+                cinematicBoomSoundManager.audioSource.pitch = 3.0f * (textStrings.Length - i) / textStrings.Length;
+            }
+            cinematicBoomSoundManager.PlaySound();
+            centralText.text = textStrings[i];
             yield return new WaitForSeconds(interval);
         }
 
