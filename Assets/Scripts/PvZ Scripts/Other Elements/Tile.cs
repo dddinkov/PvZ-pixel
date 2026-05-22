@@ -5,10 +5,12 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     public bool isOccupied;
+    [SerializeField]
+    private SoundManager plantSoundManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        plantSoundManager = GameObject.Find("PlantSoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class Tile : MonoBehaviour
         SunManager.TakeSun(price);
 
         isOccupied = true;
+        plantSoundManager.PlaySound();
         return transform.TransformPoint(transform.position);
     }
 
