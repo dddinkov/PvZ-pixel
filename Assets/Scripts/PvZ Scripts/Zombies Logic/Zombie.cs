@@ -14,6 +14,8 @@ public class Zombie : MonoBehaviour
     private float time = 0.0f;
     private bool isMoving;
     private Animator anim;
+    private SoundManager eatingSoundManager;
+    private SoundManager screamingSoundManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class Zombie : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         isMoving = true;
         anim = GetComponent<Animator>();
+        eatingSoundManager = GameObject.Find("EatingSoundManager").GetComponent<SoundManager>();
+        screamingSoundManager = GameObject.Find("ScreamingSoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,10 @@ public class Zombie : MonoBehaviour
             isMoving = false;
             rb.velocity = Vector3.zero;
             HealthSystem script = coll.gameObject.GetComponent<HealthSystem>();
+            if(Random.Range(0.0f, 1.0f) < 0.5f)
+            {
+                eatingSoundManager.PlaySound();
+            }
             script.TakeDamage(damage);
             time = 0.0f;
         }
@@ -66,6 +74,11 @@ public class Zombie : MonoBehaviour
         {
             if (anim.GetBool("Dead"))
             {
+                if(Random.Range(0.0f, 1.0f) < 0.3f)
+                {
+                    screamingSoundManager?.PlaySound();
+                }
+                screamingSoundManager = null;
                 isMoving = false;
                 return;
             }
