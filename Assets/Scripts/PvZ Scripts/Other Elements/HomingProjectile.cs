@@ -8,9 +8,9 @@ public class HomingProjectile : Projectile
     private float rotationSpeed = 200f;
     private Transform target;
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        base.Start();
         FindNearestTarget();
     }
 

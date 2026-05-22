@@ -8,10 +8,15 @@ public class Projectile : MonoBehaviour
     public float damage = 1.0f;
     protected Rigidbody2D rb;
     private float timeToLive = 20.0f;
+    private SoundManager shootSoundManager;
+    private SoundManager splashSoundManager;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        shootSoundManager = GameObject.Find("PopSoundManager").GetComponent<SoundManager>();
+        splashSoundManager = GameObject.Find("SplashSoundManager").GetComponent<SoundManager>();
+        shootSoundManager.PlaySound();
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class Projectile : MonoBehaviour
             HealthSystem script = trigger.gameObject.GetComponent<HealthSystem>();
             script.TakeDamage(damage);
             Destroy(gameObject);
+            splashSoundManager.PlaySound();
         }
     }
 }
