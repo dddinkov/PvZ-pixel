@@ -12,12 +12,14 @@ public class PotatoMine : MonoBehaviour
     private float distance;
     private Animator animator;
     private Collider2D trigger;
+    private SoundManager explosionSoundManager;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         trigger = gameObject.GetComponent<Collider2D>();
+        explosionSoundManager = GameObject.Find("ExplosionSoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class PotatoMine : MonoBehaviour
         RaycastHit2D[] rHits = Physics2D.RaycastAll(gameObject.transform.position, Vector2.right, distance);
         RaycastHit2D[] lHits = Physics2D.RaycastAll(gameObject.transform.position, Vector2.left, distance);
 
+        explosionSoundManager.PlaySound();
         animator.SetBool("explode", true);
 
         DamageZombies(rHits);
