@@ -54,12 +54,16 @@ public class PoisoningSystem : MonoBehaviour
         float time = 0f;
         while (time < duration)
         {
-            system?.TakeDamage(dps);
+            if(system == null || !system.gameObject.activeInHierarchy) yield break; // Check if the health system is destroyed before trying to apply damage
+            system.TakeDamage(dps);
             yield return new WaitForSeconds(1f);
             time += 1f;
         }
 
-        stateHandler?.SetState(ZombieState.Normal);
+        if(stateHandler != null && stateHandler.gameObject.activeInHierarchy)
+        {
+            stateHandler.SetState(ZombieState.Normal);
+        }
 
         Destroy(gameObject);
     }

@@ -73,6 +73,10 @@ public class HealthSystem : MonoBehaviour, IDamageable
                     hp += damagedArmorHealth; // damagedArmorHealth is negative, so we are actually subtracting the remaining damage from the zombie's health
                 }
             }
+            else
+            {
+                hp -= damage;
+            }
             return true;
         }
         return false;

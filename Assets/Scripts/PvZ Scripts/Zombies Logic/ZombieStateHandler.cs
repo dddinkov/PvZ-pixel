@@ -7,12 +7,12 @@ public class ZombieStateHandler : MonoBehaviour
     public ParticleSystem poisonParticles;
     private SpriteRenderer spriteRenderer;
     [SerializeField]
-    private Color poisonedColor = Color.green;
+    private Color poisonedColor;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        poisonedColor = poisonParticles.main.startColor.color;
+        poisonedColor = poisonParticles?.main.startColor.color ?? Color.green;
         poisonParticles?.Stop();
     }
 
@@ -41,6 +41,7 @@ public class ZombieStateHandler : MonoBehaviour
 
     private void StopEffects()
     {
+        if(this == null) return; // Check if the object is destroyed before trying to stop effects
         poisonParticles?.Stop();
         spriteRenderer.color = Color.white;
     }
