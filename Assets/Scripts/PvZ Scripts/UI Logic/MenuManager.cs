@@ -11,8 +11,7 @@ public class MenuManager : MonoBehaviour
     const string playSceneName = "PvZ Scene";
     public void LoadPlayScene()
     {
-        int level = player.GetLevel();
-        sceneLoader.LoadScene(level);
+        sceneLoader.LoadScene(1);
     }
     private void Start()
     {
