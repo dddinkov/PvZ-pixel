@@ -12,9 +12,6 @@ public class ZombieSpawner : MonoBehaviour
     private float time;
 
     private List<GameObject> aliveZombies = new();
-
-    private GameObject rewardInstance;
-    private Vector3 rewardPosition;
     private int[] waves;
     [SerializeField]
     private int intervalAfterWaveBurst;
@@ -24,13 +21,6 @@ public class ZombieSpawner : MonoBehaviour
         if(levelSettings != null)
         {
             time += Time.deltaTime;
-
-            UpdateRewardPosition();
-
-            if (TryDropReward())
-            {
-                EndWaves();
-            }
 
             if (currentWave < waves.Length)
             {
@@ -80,45 +70,11 @@ public class ZombieSpawner : MonoBehaviour
         );
     }
 
-    private bool TryDropReward()
-    {
-        if (currentWave >= waves.Length &&
-            !HasAliveZombies())
-        {
-            if (rewardInstance != null)
-            {
-                rewardInstance.transform.position = rewardPosition;
-                rewardInstance.SetActive(true);
-            }
-
-            return true;
-        }
-
-        return false;
-    }
-
     private bool HasAliveZombies()
     {
         aliveZombies.RemoveAll(z => z == null);
 
         return aliveZombies.Count > 0;
-    }
-
-    private void UpdateRewardPosition()
-    {
-        foreach (GameObject zombie in aliveZombies)
-        {
-            if (zombie != null)
-            {
-                rewardPosition = zombie.transform.position;
-                return;
-            }
-        }
-    }
-
-    private void EndWaves()
-    {
-        currentWave = waves.Length + 1;
     }
 
     public void SetLevel(LevelSettings levelSettings)
@@ -133,15 +89,19 @@ public class ZombieSpawner : MonoBehaviour
         waves = (int[])levelSettings.waves.Clone();
     }
 
-    public void InstantiateReward()
+    public Transform GetRandomAliveZombieTransform()
     {
-        if (levelSettings != null && levelSettings.rewardPrefab != null)
+        if (!HasAliveZombies())
         {
-            GameObject mainCanvas = GameObject.Find("Main Canvas");
-            rewardInstance = Instantiate(levelSettings.rewardPrefab);
-
-            rewardInstance.transform.SetParent(mainCanvas.transform, false);
-            rewardInstance.SetActive(false);
+            return null;
         }
+
+        int index = Random.Range(0, aliveZombies.Count);
+        return aliveZombies[index].transform;
+    }
+
+    public bool AreAllZombiesDead()
+    {
+        return !HasAliveZombies() && currentWave >= waves.Length;
     }
 }
