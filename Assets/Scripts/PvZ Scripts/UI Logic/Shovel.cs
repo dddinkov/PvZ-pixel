@@ -52,13 +52,14 @@ public class Shovel : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
             {
                 Debug.Log("Shovel hitting: " + hit.collider.name);
 
-            if (hit.collider.CompareTag("Plant"))
-            {
-                digSoundManager.PlaySound();
-                Instantiate(digEffectPrefab, hit.collider.transform.position, Quaternion.identity);
-                Destroy(hit.collider.gameObject);
-            }
-            return;
+                if (hit.collider.CompareTag("Plant"))
+                {
+                    digSoundManager.PlaySound();
+                    Instantiate(digEffectPrefab, hit.collider.transform.position, Quaternion.identity);
+                    Destroy(hit.collider.gameObject);
+                
+                    return;
+                }
             }
         }
     }
