@@ -11,4 +11,5 @@ public class LevelSettings : ScriptableObject
     public float spawnRate = 7f;
 
     public GameObject rewardPrefab;
+    public int levelIndex;
 }

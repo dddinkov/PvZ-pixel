@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,18 +24,24 @@ public class LevelManager : MonoBehaviour
     private ZombieSpawner zombieSpawner;
     [SerializeField]
     private SoundManager cinematicBoomSoundManager;
+    private Reward reward;
 
     void Start()
     {
+        levels = Resources.LoadAll<LevelSettings>("Levels").OrderBy(level => level.levelIndex).ToArray();
         player = GameObject.Find("Player").GetComponent<Player>();
-        levelIndex = player.GetLevel() - 1;
+        levelIndex = System.Math.Min(player.GetLevel() - 1, levels.Length - 1);
     }
 
     public void StartLevel()
     {
         LevelSettings selectedLevel = levels[levelIndex];
         zombieSpawner.SetLevel(selectedLevel);
-        zombieSpawner.InstantiateReward();
+        reward = Instantiate(selectedLevel.rewardPrefab.gameObject, transform).GetComponent<Reward>();
+        reward.transform.SetParent(GameObject.Find("Slots & Cards Canvas").transform, false);
+        reward.gameObject.SetActive(false);
+        
+        Debug.Log(reward.transform.position);
         
         StartCoroutine(ShowText());
         foreach(GameObject gameObject in objectsToDeactivateAfterCardSelection)
@@ -44,6 +51,21 @@ public class LevelManager : MonoBehaviour
         foreach (GameObject gameObject in objectsToActivateAfterCardSelection)
         {
             gameObject.SetActive(true);
+        }
+    }
+
+    void Update()
+    {
+        if (reward != null)
+        {
+            Transform randomAliveZombieTransform = zombieSpawner.GetRandomAliveZombieTransform();
+            if (randomAliveZombieTransform != null)            {
+                reward.transform.position = randomAliveZombieTransform.position;
+            }
+        }
+        if (zombieSpawner.gameObject.activeSelf && zombieSpawner.AreAllZombiesDead() && reward != null && !reward.gameObject.activeSelf)
+        {
+            reward.gameObject.SetActive(true);
         }
     }
 
