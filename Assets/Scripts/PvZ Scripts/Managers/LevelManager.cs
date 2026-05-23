@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
         
         Debug.Log(reward.transform.position);
         
-        StartCoroutine(ShowText());
+        StartCoroutine(ShowStartingTextsWithSound());
         foreach(GameObject gameObject in objectsToDeactivateAfterCardSelection)
         {
             gameObject.SetActive(true);
@@ -69,21 +69,26 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    IEnumerator ShowText()
+    public IEnumerator ShowTextWithSound(string text, float pitch = 3.0f)
+    {
+        cinematicBoomSoundManager.audioSource.pitch = pitch;
+        cinematicBoomSoundManager.PlaySound();
+        yield return StartCoroutine(ShowText(text));
+    }
+
+    public IEnumerator ShowText(string text)
     {
         centralText.gameObject.SetActive(true);
+        centralText.text = text;
+        yield return new WaitForSeconds(interval);
+        centralText.gameObject.SetActive(false);
+    }
 
+    IEnumerator ShowStartingTextsWithSound()
+    {
         for (int i = 0; i < textStrings.Length; i++)
         {
-            if(cinematicBoomSoundManager != null)
-            {
-                cinematicBoomSoundManager.audioSource.pitch = 3.0f * (textStrings.Length - i) / textStrings.Length;
-            }
-            cinematicBoomSoundManager.PlaySound();
-            centralText.text = textStrings[i];
-            yield return new WaitForSeconds(interval);
+            yield return StartCoroutine(ShowTextWithSound(textStrings[i]));
         }
-
-        centralText.gameObject.SetActive(false);
     }
 }
