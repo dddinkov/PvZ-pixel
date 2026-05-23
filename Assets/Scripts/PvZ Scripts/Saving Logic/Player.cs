@@ -71,7 +71,13 @@ public class Player : MonoBehaviour
 
     public void ResetPlayerData()
     {
-        SaveSystem.SavePlayer(new Player());
-        SaveSystem.LoadPlayer();
+        level = 1;
+
+        unlockedPlants = new bool[MAX_NUMBER_OF_PLANTS];
+        unlockedPlants[0] = true;
+
+        SaveSystem.SavePlayer(this);
+
+        Debug.Log("Player data reset.");
     }
 }
