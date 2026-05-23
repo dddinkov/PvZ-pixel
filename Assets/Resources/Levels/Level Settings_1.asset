@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ebcd08b0d8c6e7408a47b8f4cbbc6af, type: 3}
-  m_Name: level1
+  m_Name: Level Settings_1
   m_EditorClassIdentifier: 
   zombiePrefabs:
   - {fileID: 231547337504897669, guid: 95e4247d2417c8e4ebcea6481784548c, type: 3}
-  - {fileID: 231547337504897669, guid: 3ce81417b65e76540ab51139bcfcdffc, type: 3}
-  waves: 030000000500000006000000070000000700000007000000
-  spawnRate: 7
+  waves: 03000000
+  spawnRate: 15
   rewardPrefab: {fileID: 270786795470695368, guid: 5fb40c6b1b527c84d8f0bb7152b49a91, type: 3}
+  levelIndex: 0
