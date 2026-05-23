@@ -7,6 +7,9 @@ public class Tile : MonoBehaviour
     public bool isOccupied;
     [SerializeField]
     private SoundManager plantSoundManager;
+    [SerializeField]
+    private ParticleSystem plantEffectPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,7 @@ public class Tile : MonoBehaviour
 
         isOccupied = true;
         plantSoundManager.PlaySound();
+        Instantiate(plantEffectPrefab, transform.position, Quaternion.identity);
         return transform.TransformPoint(transform.position);
     }
 

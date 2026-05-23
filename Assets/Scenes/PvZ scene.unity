@@ -293,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &28454415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,6 +2965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &235974163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,6 +3458,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &268351061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268351062}
+  - component: {fileID: 268351064}
+  - component: {fileID: 268351063}
+  m_Layer: 5
+  m_Name: Shovel Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &268351062
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268351061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 891941905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 400, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &268351063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268351061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2d616b53b1171c04abe13a381fafbe9e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &268351064
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268351061}
+  m_CullTransparentMesh: 1
 --- !u!1 &275021199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,6 +3629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &291092896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,6 +4536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &328478153
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,6 +5484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &412041259
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,6 +6313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &436167807
 GameObject:
   m_ObjectHideFlags: 0
@@ -8549,6 +8630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!61 &653782085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8608,6 +8690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 0}
 --- !u!1 &665513353
 GameObject:
   m_ObjectHideFlags: 0
@@ -10051,6 +10134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &768629180
 GameObject:
   m_ObjectHideFlags: 0
@@ -10147,6 +10231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &780270975
 GameObject:
   m_ObjectHideFlags: 0
@@ -10958,6 +11043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &828070576
 GameObject:
   m_ObjectHideFlags: 0
@@ -11574,6 +11660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!61 &890024667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11633,6 +11720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 0}
 --- !u!1 &890963706
 GameObject:
   m_ObjectHideFlags: 0
@@ -11668,6 +11756,97 @@ RectTransform:
   m_AnchoredPosition: {x: -48.00002, y: 0}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &891941904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891941905}
+  - component: {fileID: 891941908}
+  - component: {fileID: 891941907}
+  - component: {fileID: 891941906}
+  m_Layer: 5
+  m_Name: Shovel Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &891941905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891941904}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.2558615, y: 3.2558615, z: 3.2558615}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 268351062}
+  m_Father: {fileID: 1912338603}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -150.3, y: -52.100006}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &891941906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891941904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9404ffa8c6b6d40861436a2c945edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shovelIcon: {fileID: 268351061}
+  digEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
+--- !u!114 &891941907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891941904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d031c7beb43462c4dbab2c3144fdb9a1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &891941908
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891941904}
+  m_CullTransparentMesh: 1
 --- !u!1 &893028462
 GameObject:
   m_ObjectHideFlags: 0
@@ -11874,6 +12053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &924709352
 GameObject:
   m_ObjectHideFlags: 0
@@ -12045,6 +12225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &930739186
 GameObject:
   m_ObjectHideFlags: 0
@@ -12216,6 +12397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &945225155
 GameObject:
   m_ObjectHideFlags: 0
@@ -12462,6 +12644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &956242178
 GameObject:
   m_ObjectHideFlags: 0
@@ -12558,6 +12741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &956893340
 GameObject:
   m_ObjectHideFlags: 0
@@ -13505,6 +13689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &991007030
 GameObject:
   m_ObjectHideFlags: 0
@@ -13916,6 +14101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1009997636
 GameObject:
   m_ObjectHideFlags: 0
@@ -14012,6 +14198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1011162522
 GameObject:
   m_ObjectHideFlags: 0
@@ -14489,6 +14676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1044313748
 GameObject:
   m_ObjectHideFlags: 0
@@ -16234,6 +16422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1193952148
 GameObject:
   m_ObjectHideFlags: 0
@@ -17595,6 +17784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1322052884
 GameObject:
   m_ObjectHideFlags: 0
@@ -18066,6 +18256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1371668887
 GameObject:
   m_ObjectHideFlags: 0
@@ -18281,6 +18472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1407916019
 GameObject:
   m_ObjectHideFlags: 0
@@ -18497,6 +18689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1426682373
 GameObject:
   m_ObjectHideFlags: 0
@@ -18991,6 +19184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!61 &1471825528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19050,6 +19244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 0}
 --- !u!1 &1486124429
 GameObject:
   m_ObjectHideFlags: 0
@@ -19491,6 +19686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1499116783
 GameObject:
   m_ObjectHideFlags: 0
@@ -19631,6 +19827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1501228359
 GameObject:
   m_ObjectHideFlags: 0
@@ -20468,7 +20665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1556791806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20593,7 +20790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -59}
+  m_AnchoredPosition: {x: -51.700012, y: -52.100006}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1559992425
@@ -20692,6 +20889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1565580882
 GameObject:
   m_ObjectHideFlags: 0
@@ -21676,6 +21874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1635516316
 GameObject:
   m_ObjectHideFlags: 0
@@ -21772,6 +21971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1641093226
 GameObject:
   m_ObjectHideFlags: 0
@@ -23185,6 +23385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1722552482
 GameObject:
   m_ObjectHideFlags: 0
@@ -23274,6 +23475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!61 &1728198282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23333,6 +23535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 0}
 --- !u!1 &1738252332
 GameObject:
   m_ObjectHideFlags: 0
@@ -23951,6 +24154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1816807064
 GameObject:
   m_ObjectHideFlags: 0
@@ -24115,6 +24319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!61 &1819283753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24174,6 +24379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 0}
 --- !u!1 &1819979607
 GameObject:
   m_ObjectHideFlags: 0
@@ -24885,6 +25091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1875435994
 GameObject:
   m_ObjectHideFlags: 0
@@ -25970,6 +26177,7 @@ RectTransform:
   - {fileID: 296514839}
   - {fileID: 1517322363}
   - {fileID: 1556791809}
+  - {fileID: 891941905}
   m_Father: {fileID: 207637505}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -26073,6 +26281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1919567777
 GameObject:
   m_ObjectHideFlags: 0
@@ -26654,6 +26863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1948041870
 GameObject:
   m_ObjectHideFlags: 0
@@ -26750,6 +26960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1948392641
 GameObject:
   m_ObjectHideFlags: 0
@@ -26846,6 +27057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1949440210
 GameObject:
   m_ObjectHideFlags: 0
@@ -26942,6 +27154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &1950349328
 GameObject:
   m_ObjectHideFlags: 0
@@ -27447,6 +27660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &2007426526
 GameObject:
   m_ObjectHideFlags: 0
@@ -28253,6 +28467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &2038949047
 GameObject:
   m_ObjectHideFlags: 0
@@ -29118,6 +29333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &2080877199
 GameObject:
   m_ObjectHideFlags: 0
@@ -29355,6 +29571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOccupied: 0
   plantSoundManager: {fileID: 0}
+  plantEffectPrefab: {fileID: 1130951144781999514, guid: c5c50fa010e9f054f83ed7b86afb0e5e, type: 3}
 --- !u!1 &2106260938
 GameObject:
   m_ObjectHideFlags: 0
