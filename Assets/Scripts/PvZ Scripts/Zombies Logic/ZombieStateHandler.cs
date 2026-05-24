@@ -12,7 +12,6 @@ public class ZombieStateHandler : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        poisonedColor = poisonParticles?.main.startColor.color ?? Color.green;
         poisonParticles?.Stop();
     }
 
