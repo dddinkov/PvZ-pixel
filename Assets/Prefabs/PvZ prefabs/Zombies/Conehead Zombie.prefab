@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  animator: {fileID: 0}
+  hasAnimatorHealthParameter: 0
 --- !u!95 &8725200074182269491
 Animator:
   serializedVersion: 5
@@ -226,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poisonParticles: {fileID: 8636199978503254789}
-  poisonedColor: {r: 0, g: 1, b: 0, a: 1}
+  poisonedColor: {r: 0.7372549, g: 0.29411766, b: 0.49411765, a: 1}
 --- !u!1 &3531826161024101805
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 20
+  animator: {fileID: 0}
+  hasAnimatorHealthParameter: 0
 --- !u!114 &3816175760750964651
 MonoBehaviour:
   m_ObjectHideFlags: 0

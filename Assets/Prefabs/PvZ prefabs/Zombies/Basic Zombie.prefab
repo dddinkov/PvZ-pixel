@@ -212,6 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  animator: {fileID: 0}
+  hasAnimatorHealthParameter: 0
 --- !u!114 &126679299725353976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poisonParticles: {fileID: 5050673805736554505}
-  poisonedColor: {r: 0, g: 1, b: 0, a: 1}
+  poisonedColor: {r: 0.7372549, g: 0.29411766, b: 0.49411765, a: 1}
 --- !u!1001 &4359407858746277739
 PrefabInstance:
   m_ObjectHideFlags: 0
