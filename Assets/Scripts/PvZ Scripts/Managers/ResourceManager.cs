@@ -8,7 +8,7 @@ public abstract class ResourceManager : MonoBehaviour
     [SerializeField]
     protected int startAmount = 0;
     [SerializeField]
-    protected int maxAmount = 9990;
+    protected int maxAmount = 10000;
 
     public int Amount {get; protected set;}
 
