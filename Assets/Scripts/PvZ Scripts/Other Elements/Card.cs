@@ -8,7 +8,7 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
 {
     public GameObject plantObject;
     public Sprite plantSprite;
-    public float sunCost = 100.0f;
+    public int sunCost = 100;
     public float cooldown = 8.0f;
     private float time = 8.0f;
     private Vector2 pos;
@@ -56,7 +56,7 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
     }
     public void OnPointerClick(PointerEventData data)
     {
-        if (time < cooldown || !SunManager.CanTakeSun(sunCost))
+        if (time < cooldown || !SunManager.Instance.CanSpend(sunCost))
         {
             canDrag = false;
             BlinkRed();
@@ -75,7 +75,7 @@ public class Card : MonoBehaviour, IDragHandler,  IPointerUpHandler, IPointerCli
             BlinkRed();
             return;
         }
-        if (!SunManager.CanTakeSun(sunCost))
+        if (!SunManager.Instance.CanSpend(sunCost))
         {
             startDragging = false;
             BlinkRed();

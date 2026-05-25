@@ -22,7 +22,7 @@ public class Tile : MonoBehaviour
         
     }
 
-    public Vector3 PlacePlant(GameObject plant, float price)
+    public Vector3 PlacePlant(GameObject plant, int price)
     {
         if(isOccupied)
         {
@@ -43,11 +43,10 @@ public class Tile : MonoBehaviour
             }
         }
 
-        if (!SunManager.CanTakeSun(price))
+        if (!SunManager.Instance.TrySpend(price))
         {
             return Vector3.zero;
         }
-        SunManager.TakeSun(price);
 
         isOccupied = true;
         plantSoundManager.PlaySound();

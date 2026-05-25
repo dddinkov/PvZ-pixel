@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Sun : MonoBehaviour, IPointerClickHandler
 {
     public float fallingSpeed = 10.0f;
-    public float sunAmount = 25.0f;
+    public int sunAmount = 25;
     public float maxFallDistance = 1000.0f;
     public float fallOffset = 200.0f;
     public float timeToLive = 6.0f;
@@ -55,7 +55,7 @@ public class Sun : MonoBehaviour, IPointerClickHandler
         {
             if ((transform.position.y >= destination.position.y - 0.1f && (transform.position.x <= destination.position.x + 0.1f)))
             {
-                SunManager.AddSun(sunAmount);
+                SunManager.Instance.Add(sunAmount);
                 Destroy(gameObject);
             }
             return;
